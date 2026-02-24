@@ -5,37 +5,25 @@
 
   <style>
     body {
-      margin: 0;
-      padding: 0;
       background: black;
       color: white;
-      font-family: Arial, sans-serif;
       text-align: center;
-    }
-
-    section {
-      padding: 60px 20px;
+      font-family: Arial;
+      padding: 80px 20px;
     }
 
     h1 {
-      font-size: 42px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      max-width: 650px;
-      margin: auto;
+      font-size: 40px;
     }
 
     .btn {
       margin-top: 40px;
-      padding: 15px 35px;
+      padding: 15px 30px;
       font-size: 18px;
-      border: none;
-      border-radius: 10px;
       background: red;
       color: white;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -49,47 +37,19 @@
 
 <body>
 
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
+<h1>Happy Birthday Tommy ❤️</h1>
 
-<section>
+<p>
+Duniya ke liye tum Gunjan ho,<br>
+lekin mere liye tum hamesha meri Tommy rahogi.<br><br>
+Aur aaj bhi, har din, main sirf tumhe hi choose karta hoon.
+</p>
 
-  <h1>Happy Birthday, Tommy ❤️</h1>
+<h2 style="margin-top:50px;">A Special Surprise For You ❤️</h2>
 
-  <p>
-    Duniya ke liye tum Gunjan ho,<br>
-    lekin mere liye tum hamesha meri Tommy rahogi.<br><br>
-
-    Us din jab tumne mujhe Bruno bulaya tha,<br>
-    shayad wahi se meri kahani shuru ho gayi thi.<br><br>
-
-    Aur aaj bhi, har din, main sirf tumhe hi choose karta hoon.
-  </p>
-
-  <h2 style="margin-top:50px;">A Special Surprise For You ❤️</h2>
-
-  <a href="https://www.youtube.com/watch?v=6775ueOYLo8" target="_blank">
-    <button class="btn">🎥 Watch Your Surprise</button>
-  </a>
-
-</section>
-
-<script>
-window.addEventListener("load", function() {
-
-  setTimeout(function() {
-
-    var music = document.getElementById("bgMusic");
-    music.currentTime = 52; // chorus start
-    music.volume = 0.3;
-    music.play().catch(()=>{});
-
-  }, 3000); // 3 second delay
-
-});
-</script>
+<a href="https://www.youtube.com/watch?v=6775ueOYLo8" target="_blank">
+  <button class="btn">🎥 Watch Your Surprise</button>
+</a>
 
 </body>
 </html>
