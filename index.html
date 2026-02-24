@@ -7,31 +7,42 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
+      background: black;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
     }
 
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 40px;
-      margin-bottom: 20px;
+      font-size: 42px;
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
     }
 
-    iframe {
+    .btn {
       margin-top: 40px;
-      border-radius: 12px;
+      padding: 15px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: red;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff4d4d;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -59,43 +70,23 @@
 
   <h2 style="margin-top:50px;">A Special Surprise For You ❤️</h2>
 
-  <!-- YouTube Short Embed -->
-  <iframe 
-    width="360"
-    height="640"
-    src="https://www.youtube.com/embed/6775ueOYLo8"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+  <a href="https://www.youtube.com/watch?v=6775ueOYLo8" target="_blank">
+    <button class="btn">🎥 Watch Your Surprise</button>
+  </a>
 
 </section>
 
-<!-- Music Script -->
 <script>
 window.addEventListener("load", function() {
 
   setTimeout(function() {
 
     var music = document.getElementById("bgMusic");
-
-    music.currentTime = 52;   // Chorus start
-    music.volume = 0.2;
-
+    music.currentTime = 52; // chorus start
+    music.volume = 0.3;
     music.play().catch(()=>{});
 
-    // Smooth fade in
-    let vol = 0.2;
-    const fade = setInterval(function(){
-      if (vol < 0.7) {
-        vol += 0.05;
-        music.volume = vol;
-      } else {
-        clearInterval(fade);
-      }
-    }, 400);
-
-  }, 3000); // 3 sec delay
+  }, 3000); // 3 second delay
 
 });
 </script>
