@@ -1,101 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Tommy</title>
+  <title>Happy Birthday Tommy ❤️</title>
 
-<!-- Elegant Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-<style>
-body{
-margin:0;
-font-family:'Poppins', sans-serif;
-background:linear-gradient(135deg,#111111,#1f1f1f,#2c2c2c);
-color:#f5f5f5;
-text-align:center;
-}
+    section {
+      padding: 50px 20px;
+    }
 
-section{
-padding:80px 20px;
-max-width:900px;
-margin:auto;
-}
+    h1 {
+      font-size: 40px;
+    }
 
-h1{
-font-family:'Playfair Display', serif;
-font-size:42px;
-letter-spacing:1px;
-margin-bottom:20px;
-color:#ffffff;
-}
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
+    }
 
-p{
-font-size:18px;
-line-height:1.8;
-color:#cccccc;
-}
-
-button{
-padding:12px 28px;
-border:1px solid #ffffff;
-background:transparent;
-color:white;
-font-size:15px;
-letter-spacing:1px;
-cursor:pointer;
-margin-top:25px;
-transition:0.3s ease;
-}
-
-button:hover{
-background:white;
-color:black;
-}
-
-video{
-width:100%;
-max-width:650px;
-border-radius:12px;
-margin-top:40px;
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
-}
-</style>
+    iframe {
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- Background Music -->
 <audio id="bgMusic" loop>
-<source src="song.mp3" type="audio/mpeg">
+  <source src="song.mp3" type="audio/mpeg">
 </audio>
 
 <section>
 
-<h1>Happy Birthday, Tommy</h1>
+  <h1>Happy Birthday, Tommy ❤️</h1>
 
-<p>
-Duniya ke liye tum Gunjan ho,  
-lekin mere liye tum hamesha meri Tommy rahogi.  
+  <p>
+    Duniya ke liye tum Gunjan ho,<br>
+    lekin mere liye tum hamesha meri Tommy rahogi.<br><br>
 
-Us din jab tumne mujhe Bruno bulaya tha,  
-shayad wahi se meri kahani shuru ho gayi thi.  
+    Us din jab tumne mujhe Bruno bulaya tha,<br>
+    shayad wahi se meri kahani shuru ho gayi thi.<br><br>
 
-Aur aaj bhi, har din, main sirf tumhe hi choose karta hoon.
-</p>
+    Aur aaj bhi, har din, main sirf tumhe hi choose karta hoon.
+  </p>
 
-<button onclick="playMusic()">Play Music</button>
+  <h2 style="margin-top:40px;">A Special Surprise For You ❤️</h2>
 
-<video controls>
-<source src="video.mp4" type="video/mp4">
-</video>
+  <iframe 
+    width="90%" 
+    height="450"
+    src="https://www.youtube.com/embed/vWBItsjIUWdXyB49"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
 
 </section>
 
+<!-- Music Script -->
 <script>
-function playMusic(){
-document.getElementById("bgMusic").play();
-}
+window.addEventListener("load", function() {
+
+  setTimeout(function() {
+
+    var music = document.getElementById("bgMusic");
+
+    music.currentTime = 52;   // Start from chorus
+    music.volume = 0.2;       // Start low volume
+
+    music.play().catch(()=>{});
+
+    // Smooth volume increase
+    let vol = 0.2;
+    const fade = setInterval(function(){
+      if (vol < 0.7) {
+        vol += 0.05;
+        music.volume = vol;
+      } else {
+        clearInterval(fade);
+      }
+    }, 400);
+
+  }, 3000); // 3 second delay
+
+});
 </script>
 
 </body>
