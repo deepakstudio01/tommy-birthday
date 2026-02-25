@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday My Love ❤️</title>
+<title>Our Story ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
@@ -11,10 +11,11 @@
 body{
   margin:0;
   padding:0;
-  background:radial-gradient(circle at top,#3b0000,#140000,#000);
+  background: radial-gradient(circle at top,#3a0000,#150000,#000);
   color:white;
   text-align:center;
   overflow-x:hidden;
+  font-family:'Cormorant Garamond', serif;
 }
 
 /* Coming Screen */
@@ -25,26 +26,29 @@ body{
   align-items:center;
   flex-direction:column;
   cursor:pointer;
-  background:linear-gradient(135deg,#2b0000,#000);
 }
 
 #coming h1{
   font-family:'Great Vibes', cursive;
-  font-size:75px;
-  color:#ffd6e0;
-  text-shadow:0 0 40px #ff4d6d;
+  font-size:70px;
+  color:#ff9aa2;
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 20px #ff1744;}
+  to{text-shadow:0 0 60px #ff4d6d;}
 }
 
 #coming p{
-  font-family:'Cormorant Garamond', serif;
-  font-size:22px;
-  color:#ffe5ec;
+  font-size:20px;
+  color:#ffd6e0;
 }
 
 /* Main Section */
 #main{
   display:none;
-  padding:60px 20px;
+  padding:40px 20px;
   animation:fadeIn 2s ease;
 }
 
@@ -55,32 +59,28 @@ body{
 
 .title{
   font-family:'Great Vibes', cursive;
-  font-size:60px;
-  color:#ffd1dc;
-  text-shadow:0 0 30px #ff4d6d;
-  margin-bottom:30px;
+  font-size:55px;
+  color:#ffc2d1;
+  text-shadow:0 0 40px #ff1744;
 }
 
 .story{
-  font-family:'Cormorant Garamond', serif;
-  font-size:22px;
-  max-width:900px;
+  font-size:21px;
+  max-width:850px;
   margin:40px auto;
-  line-height:2.1;
-  letter-spacing:0.6px;
-  color:#fff0f5;
+  line-height:2;
+  color:#ffe5ec;
 }
 
-/* Button */
 button{
-  padding:15px 45px;
+  padding:15px 50px;
   border:none;
   border-radius:30px;
-  background:linear-gradient(45deg,#ff1744,#ff6f91);
+  background:linear-gradient(45deg,#ff1744,#ff4d6d);
   color:white;
   font-size:18px;
   cursor:pointer;
-  box-shadow:0 0 30px #ff1744;
+  box-shadow:0 0 40px #ff1744;
   transition:0.3s;
 }
 
@@ -90,30 +90,43 @@ button:hover{
 
 /* Video */
 .video-wrapper{
-  max-width:400px;
-  margin:60px auto;
+  max-width:360px;
+  margin:50px auto;
   display:none;
 }
 
 video{
   width:100%;
   border-radius:25px;
-  box-shadow:0 0 80px rgba(255,77,109,0.9);
+  box-shadow:0 0 80px rgba(255,23,68,0.8);
 }
 
-/* Golden Sparkle Stars */
+/* Floating Stars */
 .star{
   position:fixed;
   bottom:-20px;
-  font-size:18px;
-  animation:float 14s linear infinite;
-  opacity:0.9;
-  color:#ffd700;
+  font-size:20px;
+  animation:floatUp 12s linear infinite;
+  color:#ffd6e0;
+  text-shadow:0 0 20px #ff4d6d;
 }
 
-@keyframes float{
+@keyframes floatUp{
   0%{transform:translateY(0);opacity:1;}
-  100%{transform:translateY(-130vh);opacity:0;}
+  100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* Floating Teddy */
+.teddy{
+  position:fixed;
+  bottom:-50px;
+  font-size:35px;
+  animation:floatTeddy 18s linear infinite;
+}
+
+@keyframes floatTeddy{
+  0%{transform:translateY(0) rotate(0deg);opacity:1;}
+  100%{transform:translateY(-130vh) rotate(360deg);opacity:0;}
 }
 
 </style>
@@ -121,157 +134,27 @@ video{
 
 <body>
 
-<audio id="bgMusic" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgMusic" src="song.mp3" loop></audio>
 
+<!-- Coming Screen -->
 <div id="coming">
-  <h1>Happy Birthday ✨</h1>
-  <p>Tap To Enter Our Love Story ❤️</p>
+  <h1>Coming Soon ❤️</h1>
+  <p>Tap To Enter Our Love Story</p>
 </div>
 
+<!-- Main -->
 <div id="main">
 
-<div class="title">16 August 2025 💖</div>
+<div class="title">16 August 2025 ✨</div>
 
 <div class="story">
 
-Us din hum bohot dino baad mile the…
-Par sach kahu toh woh sirf milna nahi tha…
-Woh meri zindagi ka mod tha ❤️
+Us din hum bohot dino baad mile the… Par sach kahu toh woh sirf milna nahi tha… Woh meri zindagi ka mod tha ❤️ Noida aur yahan ke fasle sirf shehron ke nahi the… Woh dil ke intezaar ke the… Har raat bas ek jhalak ke liye tarasna… Aur phir tumhe saamne dekhna… Jaise saari kami ek pal me poori ho gayi ho 🥺 Janmastami hum dono ke liye sirf ek tyohaar nahi rahi… Woh humari kahaani ki shuruaat ban gayi ✨ Prince ke birthday wale din jab tumne baat ki… Main office me tha… Par us din main employee nahi tha… Main bas ek insaan tha… Jo apni feelings chhupa nahi pa raha tha… Aansu ruk hi nahi rahe the 💔 Janmastami ki woh raat… School ka function… Aur tumhara haath mere haath me 🤝 Us pal main duniya se nahi… Khud se jeet gaya tha ❤️ Dil kar raha tha tumhe gale laga loon… Par shayad us pal ka sukoon sirf haath pakadne me hi tha… Jaise khuda ne kaha ho — “Yahi tumhari amanat hai.” Ghar pahunch kar bhi baatein khatam nahi hui… Waqt ruk sa gaya tha… Aur us raat maine mehsoos kiya… Ki mujhe meri duniya mil chuki hai 💞 College wait wala phase… Main jhooth bolkar ghar se nikalta tha… Sirf tumhara ek pal dekhne ke liye… Gate ke bahar khade rehna bhi ibadat lagta tha 🥺 Pehle tum kehti thi — “We are just friends.” Phir ek din woh “Alabuuu…” Aur phir woh khamosh si mohabbat 💖 Tum darrti thi “I love you” bolne se… Par maine jab propose kiya… Toh mera ego nahi… Mera poora dil tumhare saamne jhuk gaya 😌 School me ladte the… Ek dusre ko chidhate the… Tu se baat karte the… Aur aaj “tu” se “aap” tak ka safar… Mujhe yaad dilata hai ki pyaar waqt ke saath aur gehra hota hai ♾️ Tumhare aane se pehle main khud se bhaag raha tha… Drink… smoke… galat aadatein… Main bas zinda tha… jee nahi raha tha 💔 Par tumhare aane ke baad… Main badla nahi… Main naya ban gaya ❤️ Tumne mujhe sudhaara nahi… Tumne mujhe mehsoos karna sikhaya… Pyaar karna sikhaya… Aur sabse zaroori… Khud ko samajhna sikhaya ✨ Happy Birthday meri jaan 🎂💞 Agar meri zindagi ek kitaab hai… Toh uska sabse khoobsurat chapter tum ho ❤️ Aaj ka din tumhara hai… Par meri har subah… Har dua… Har saans… Hamesha tumhare naam rahegi ♾️💍
 
-Noida aur yahan ke fasle sirf shehron ke nahi the…
-Woh dil ke intezaar ke the…
-Har raat bas ek jhalak ke liye tarasna…
-Aur phir tumhe saamne dekhna…
-Jaise saari kami ek pal me poori ho gayi ho 🥺
-
-Janmastami hum dono ke liye sirf ek tyohaar nahi rahi…
-Woh humari kahaani ki shuruaat ban gayi ✨
-Prince ke birthday wale din jab tumne baat ki…
-Main office me tha…
-Par us din main employee nahi tha…
-Main bas ek insaan tha…
-Jo apni feelings chhupa nahi pa raha tha…
-Aansu ruk hi nahi rahe the 💔
-
-Janmastami ki woh raat…
-School ka function…
-Aur tumhara haath mere haath me 🤝
-Us pal main duniya se nahi…
-Khud se jeet gaya tha ❤️
-
-Dil kar raha tha tumhe gale laga loon…
-Par shayad us pal ka sukoon sirf haath pakadne me hi tha…
-Jaise khuda ne kaha ho —
-“Yahi tumhari amanat hai.”
-
-Ghar pahunch kar bhi baatein khatam nahi hui…
-Waqt ruk sa gaya tha…
-Aur us raat maine mehsoos kiya…
-Ki mujhe meri duniya mil chuki hai 💞
-
-College wait wala phase…
-Main jhooth bolkar ghar se nikalta tha…
-Sirf tumhara ek pal dekhne ke liye…
-Gate ke bahar khade rehna bhi ibadat lagta tha 🥺
-
-Pehle tum kehti thi — “We are just friends.”
-Phir ek din woh “Alabuuu…”
-Aur phir woh khamosh si mohabbat 💖
-Tum darrti thi “I love you” bolne se…
-Par maine jab propose kiya…
-Toh mera ego nahi…
-Mera poora dil tumhare saamne jhuk gaya 😌
-
-School me ladte the…
-Ek dusre ko chidhate the…
-Tu se baat karte the…
-Aur aaj “tu” se “aap” tak ka safar…
-Mujhe yaad dilata hai ki pyaar waqt ke saath aur gehra hota hai ♾️
-
-Tumhare aane se pehle main khud se bhaag raha tha…
-Drink… smoke… galat aadatein…
-Main bas zinda tha… jee nahi raha tha 💔
-Par tumhare aane ke baad…
-Main badla nahi…
-Main naya ban gaya ❤️
-
-Tumne mujhe sudhaara nahi…
-Tumne mujhe mehsoos karna sikhaya…
-Pyaar karna sikhaya…
-Aur sabse zaroori…
-Khud ko samajhna sikhaya ✨
-
-Happy Birthday meri jaan 🎂💞
-Agar meri zindagi ek kitaab hai…
-Toh uska sabse khoobsurat chapter tum ho ❤️
-
-Aaj ka din tumhara hai…
-Par meri har subah…
-Har dua…
-Har saans…
-Hamesha tumhare naam rahegi ♾️💍
-
-<br><br>
-
-Happy Birthday meri jaan 🎂💞  
-
-Agar meri zindagi ek kitaab hai…  
-Toh uska sabse khoobsurat chapter tum ho ❤️  
-
-Jab main toot raha tha…  
-Tumne sambhala…  
-
-Mujhe duniya ki koi cheez itni zaroori nahi…  
-Jitna tumhara saath zaroori hai 💍  
-
-Aaj ka din tumhara hai…  
-Par meri har saans…  
-Har dua…  
-Har kal…  
-Sirf tumhare naam ♾️❤️  
-
-  again 
-
-  Happy Birthday meri jaan 🎂💞
-
-Kabhi kabhi main sochta hoon…
-Agar tum meri zindagi me na aati…
-Toh shayad main aaj bhi bheed me khada hota…
-Par akela hota 💔
-
-Tumne mujhe sirf pyaar nahi diya…
-Tumne mujhe wajah di jeene ki ❤️
-
-Jab main toot raha tha…
-Tumne mujhe sambhala…
-Jab main bhatak raha tha…
-Tumne mujhe raasta dikhaya…
-
-Main perfect nahi hoon…
-Par tumhare liye har din better banna chahta hoon 🥺
-
-Agar kabhi meri saansein bhi kam pad jaayein…
-Toh meri duaon me tumhara naam hamesha rahega ♾️
-
-Mujhe duniya ki koi cheez itni zaroori nahi…
-Jitna tumhara saath zaroori hai 💍
-
-Aaj ka din tumhara hai…
-Par meri har khushi…
-Har sapna…
-Har kal…
-Sirf aur sirf tumhare naam ❤️♾️
-
-Aur agar kabhi koi puche…
-“Meri sabse badi kamyabi kya hai?”
-Toh main bina soche kahunga…
-“Tum.” 💞
-
+Happy Birthday meri jaan 🎂💞 Agar meri zindagi ek kitaab hai… Toh uska sabse khoobsurat chapter tum ho ❤️ Jab main toot raha tha… Tumne sambhala… Mujhe duniya ki koi cheez itni zaroori nahi… Jitna tumhara saath zaroori hai 💍 Aaj ka din tumhara hai… Par meri har saans… Har dua… Har kal… Sirf tumhare naam ♾️❤️ again Happy Birthday meri jaan 🎂💞 Kabhi kabhi main sochta hoon… Agar tum meri zindagi me na aati… Toh shayad main aaj bhi bheed me khada hota… Par akela hota 💔 Tumne mujhe sirf pyaar nahi diya… Tumne mujhe wajah di jeene ki ❤️ Jab main toot raha tha… Tumne mujhe sambhala… Jab main bhatak raha tha… Tumne mujhe raasta dikhaya… Main perfect nahi hoon… Par tumhare liye har din better banna chahta hoon 🥺 Agar kabhi meri saansein bhi kam pad jaayein… Toh meri duaon me tumhara naam hamesha rahega ♾️ Mujhe duniya ki koi cheez itni zaroori nahi… Jitna tumhara saath zaroori hai 💍 Aaj ka din tumhara hai… Par meri har khushi… Har sapna… Har kal… Sirf aur sirf tumhare naam ❤️♾️ Aur agar kabhi koi puche… “Meri sabse badi kamyabi kya hai?” Toh main bina soche kahunga… “Tum.” 💞
 </div>
 
-<button id="videoBtn">Open Our Special Memory ❤️</button>
+<button id="openBtn">Open Our Special Memory ❤️</button>
 
 <div class="video-wrapper" id="videoSection">
   <video controls playsinline>
@@ -283,36 +166,54 @@ Toh main bina soche kahunga…
 
 <script>
 
-/* Coming Click + Music */
+// Coming screen
 document.getElementById("coming").addEventListener("click",function(){
   this.style.display="none";
   document.getElementById("main").style.display="block";
-
-  var music = document.getElementById("bgMusic");
-music.volume = 0.5;
-
-setTimeout(function(){
-  music.play();
-}, 300);
 });
 
-/* Video Reveal */
-document.getElementById("videoBtn").addEventListener("click",function(){
+// Music fade + reveal
+document.getElementById("openBtn").addEventListener("click",function(){
+
+  var music=document.getElementById("bgMusic");
+  music.volume=0;
+  music.play().catch(()=>{});
+
+  var fade=setInterval(function(){
+    if(music.volume<0.4){
+      music.volume+=0.02;
+    }else{
+      clearInterval(fade);
+    }
+  },200);
+
   document.getElementById("videoSection").style.display="block";
   this.style.display="none";
+
 });
 
-/* Sparkle Effect */
+// Floating stars
 function createStar(){
   const star=document.createElement("div");
   star.classList.add("star");
   star.innerHTML="✨";
   star.style.left=Math.random()*100+"vw";
-  star.style.fontSize=(Math.random()*20+12)+"px";
+  star.style.fontSize=(Math.random()*20+15)+"px";
   document.body.appendChild(star);
-  setTimeout(()=>{star.remove();},14000);
+  setTimeout(()=>{star.remove();},12000);
 }
 setInterval(createStar,800);
+
+// Floating teddy
+function createTeddy(){
+  const teddy=document.createElement("div");
+  teddy.classList.add("teddy");
+  teddy.innerHTML="🧸";
+  teddy.style.left=Math.random()*100+"vw";
+  document.body.appendChild(teddy);
+  setTimeout(()=>{teddy.remove();},18000);
+}
+setInterval(createTeddy,5000);
 
 </script>
 
