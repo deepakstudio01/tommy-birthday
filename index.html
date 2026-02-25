@@ -4,21 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For My Gunnu ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 body{
   margin:0;
   padding:0;
-  background: radial-gradient(circle at center, #3b0000, #000);
-  font-family:'Playfair Display', serif;
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #2b0000, #000);
   color:white;
-  overflow:hidden;
   text-align:center;
+  overflow-x:hidden;
 }
 
-/* Coming Soon Screen */
+/* Coming Screen */
 #coming{
   height:100vh;
   display:flex;
@@ -30,13 +29,18 @@ body{
 }
 
 #coming h1{
-  font-size:60px;
   font-family:'Great Vibes', cursive;
+  font-size:60px;
   color:#ff9aa2;
   text-shadow:0 0 30px #ff1744;
 }
 
-/* Main Section Hidden Initially */
+#coming p{
+  color:#ffd6e0;
+  font-size:18px;
+}
+
+/* Main Hidden Section */
 #main{
   display:none;
   padding:40px 20px;
@@ -48,24 +52,22 @@ body{
   to{opacity:1;}
 }
 
-.bigText{
+.bigTitle{
   font-family:'Great Vibes', cursive;
-  font-size:40px;
+  font-size:42px;
   color:#ffccd5;
-  margin-bottom:30px;
   text-shadow:0 0 20px #ff1744;
 }
 
 .story{
   max-width:800px;
-  margin:auto;
-  font-size:18px;
+  margin:30px auto;
+  font-size:17px;
   line-height:1.8;
   color:#ffe5ec;
 }
 
 button{
-  margin-top:40px;
   padding:12px 35px;
   border:none;
   border-radius:30px;
@@ -81,15 +83,16 @@ button:hover{
   transform:scale(1.1);
 }
 
-.video-section{
+.video-wrapper{
+  max-width:360px;
+  margin:40px auto;
   display:none;
-  margin-top:40px;
 }
 
 video{
-  width:300px;
-  border-radius:20px;
-  box-shadow:0 0 40px #ff1744;
+  width:100%;
+  border-radius:25px;
+  box-shadow:0 0 60px rgba(255, 23, 68, 0.7);
 }
 
 /* Floating Hearts */
@@ -105,7 +108,6 @@ video{
   0%{ transform:translateY(0); opacity:1;}
   100%{ transform:translateY(-120vh); opacity:0;}
 }
-
 </style>
 </head>
 
@@ -115,17 +117,17 @@ video{
   <source src="song.mp3" type="audio/mp3">
 </audio>
 
-<!-- Coming Soon Screen -->
+<!-- Coming Soon -->
 <div id="coming">
   <h1>Coming Soon ❤️</h1>
-  <p style="color:#ffd6e0;">Tap Anywhere To Open</p>
+  <p>Tap Anywhere To Open</p>
 </div>
 
-<!-- Main Emotional Section -->
+<!-- Main Content -->
 <div id="main">
 
-<div class="bigText">
-Wish uh a veryy happy birthday meri jaaan 💞
+<div class="bigTitle">
+Wish uh a very happy birthday meri jaaan 💞
 </div>
 
 <div class="story">
@@ -173,8 +175,8 @@ Aur mera har kal tumhare naam ❤️♾️
 
 <button id="openBtn">Click To Feel My Love ❤️</button>
 
-<div class="video-section" id="videoSection">
-  <video controls>
+<div class="video-wrapper" id="videoSection">
+  <video controls playsinline>
     <source src="video.mp4" type="video/mp4">
   </video>
 </div>
@@ -183,13 +185,13 @@ Aur mera har kal tumhare naam ❤️♾️
 
 <script>
 
-/* Open Coming Screen */
+/* Coming Screen Click */
 document.getElementById("coming").addEventListener("click",function(){
   this.style.display="none";
   document.getElementById("main").style.display="block";
 });
 
-/* Start Music + Show Video */
+/* Reveal Video + Music */
 document.getElementById("openBtn").addEventListener("click",function(){
 
   var music=document.getElementById("bgMusic");
@@ -198,7 +200,6 @@ document.getElementById("openBtn").addEventListener("click",function(){
 
   document.getElementById("videoSection").style.display="block";
   this.style.display="none";
-
 });
 
 /* Floating Hearts */
