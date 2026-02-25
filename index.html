@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Gunnu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  padding:0;
+  background: radial-gradient(circle at center, #3b0000, #000);
+  font-family:'Playfair Display', serif;
+  color:white;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* Coming Soon Screen */
+#coming{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  cursor:pointer;
+  transition:1s;
+}
+
+#coming h1{
+  font-size:60px;
+  font-family:'Great Vibes', cursive;
+  color:#ff9aa2;
+  text-shadow:0 0 30px #ff1744;
+}
+
+/* Main Section Hidden Initially */
+#main{
+  display:none;
+  padding:40px 20px;
+  animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+.bigText{
+  font-family:'Great Vibes', cursive;
+  font-size:40px;
+  color:#ffccd5;
+  margin-bottom:30px;
+  text-shadow:0 0 20px #ff1744;
+}
+
+.story{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.8;
+  color:#ffe5ec;
+}
+
+button{
+  margin-top:40px;
+  padding:12px 35px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff1744,#ff4d6d);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 20px #ff1744;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.video-section{
+  display:none;
+  margin-top:40px;
+}
+
+video{
+  width:300px;
+  border-radius:20px;
+  box-shadow:0 0 40px #ff1744;
+}
+
+/* Floating Hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:25px;
+  animation:float 8s linear infinite;
+  text-shadow:0 0 15px #ff4d6d;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0); opacity:1;}
+  100%{ transform:translateY(-120vh); opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mp3">
+</audio>
+
+<!-- Coming Soon Screen -->
+<div id="coming">
+  <h1>Coming Soon ❤️</h1>
+  <p style="color:#ffd6e0;">Tap Anywhere To Open</p>
+</div>
+
+<!-- Main Emotional Section -->
+<div id="main">
+
+<div class="bigText">
+Wish uh a veryy happy birthday meri jaaan 💞
+</div>
+
+<div class="story">
+
+Ur are the one of the best sweetest and supportive person in my life ❤️  
+
+Janmastami ka woh pehla moment yaad hai na…  
+Jab humne ek dusre ka haath pakad kar promise kiya tha ki kabhi saath nahi chhodenge 🤝✨  
+
+Kanhaa ji ko jhula jhulaya tha…  
+Shayad unhone seriously le liya aur hume ek saath kar diya 💫  
+
+Pehle we were just friends…  
+Aur aaj dekho, itni strong bonding hai ki koi tod bhi nahi sakta 🥺💖  
+
+School me sabka hum dono se jalna…  
+Kitna cute lagta tha na 😌  
+
+I love uh so much bachhaaa ❤️♾️  
+
+<br><br>
+
+<b>Happy Birthday Gunnu 🎂💞</b>  
+
+Kabhi kabhi sochta hoon…  
+Agar tum meri life me na hoti toh main adhura reh jaata 🥺  
+
+Tum meri khushi nahi…  
+Meri himmat, mera future ho 🌅  
+
+Main bas dua karta hoon 🤲  
+Ki hum saath grow karein, saath successful bane 🚀  
+Aur har mushkil saath paar karein 💖  
+
+Chahe waqt badle…  
+Par hamara saath kabhi na badle ♾️  
+
+Mujhe paisa baad me chahiye…  
+Sabse pehle mujhe tumhara lifetime saath chahiye 💍❤️  
+
+Aaj ka din tumhara hai…  
+Aur mera har kal tumhare naam ❤️♾️  
+
+</div>
+
+<button id="openBtn">Click To Feel My Love ❤️</button>
+
+<div class="video-section" id="videoSection">
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+</div>
+
+</div>
+
+<script>
+
+/* Open Coming Screen */
+document.getElementById("coming").addEventListener("click",function(){
+  this.style.display="none";
+  document.getElementById("main").style.display="block";
+});
+
+/* Start Music + Show Video */
+document.getElementById("openBtn").addEventListener("click",function(){
+
+  var music=document.getElementById("bgMusic");
+  music.volume=0.35;
+  music.play();
+
+  document.getElementById("videoSection").style.display="block";
+  this.style.display="none";
+
+});
+
+/* Floating Hearts */
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(Math.random()*20+20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},8000);
+}
+setInterval(createHeart,1000);
+
+</script>
+
+</body>
+</html>
