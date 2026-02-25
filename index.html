@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Love Story ✨</title>
+<title>Our Story ✨</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
@@ -11,7 +11,7 @@
 body{
   margin:0;
   padding:0;
-  background:linear-gradient(135deg,#0a0a0a,#1a0000,#000);
+  background:linear-gradient(135deg,#0d0d0d,#1a0000,#000);
   color:white;
   text-align:center;
   overflow-x:hidden;
@@ -29,15 +29,21 @@ body{
 
 #coming h1{
   font-family:'Great Vibes', cursive;
-  font-size:65px;
-  color:#ffb6c1;
-  text-shadow:0 0 30px #ff4d6d;
+  font-size:70px;
+  color:#ffccd5;
+  text-shadow:0 0 35px #ff4d6d;
+}
+
+#coming p{
+  font-family:'Cormorant Garamond', serif;
+  font-size:20px;
+  color:#ffd6e0;
 }
 
 /* Main */
 #main{
   display:none;
-  padding:40px 20px;
+  padding:60px 20px;
   animation:fadeIn 2s ease;
 }
 
@@ -51,53 +57,38 @@ body{
   font-size:55px;
   color:#ffd1dc;
   text-shadow:0 0 25px #ff4d6d;
+  margin-bottom:30px;
 }
 
 .story{
   font-family:'Cormorant Garamond', serif;
-  font-size:21px;
+  font-size:22px;
   max-width:850px;
-  margin:40px auto;
+  margin:0 auto;
   line-height:2;
-  letter-spacing:0.5px;
+  letter-spacing:0.6px;
   color:#fff0f5;
-}
-
-button{
-  padding:12px 40px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(45deg,#ff4d6d,#ff1744);
-  color:white;
-  font-size:17px;
-  cursor:pointer;
-  box-shadow:0 0 25px #ff4d6d;
-  transition:0.3s;
-}
-
-button:hover{
-  transform:scale(1.1);
 }
 
 /* Video */
 .video-wrapper{
-  max-width:360px;
-  margin:50px auto;
+  max-width:380px;
+  margin:60px auto;
   display:none;
 }
 
 video{
   width:100%;
   border-radius:25px;
-  box-shadow:0 0 60px rgba(255,77,109,0.8);
+  box-shadow:0 0 70px rgba(255,77,109,0.8);
 }
 
-/* Stars */
+/* Dreamy Stars */
 .star{
   position:fixed;
   bottom:-20px;
-  font-size:20px;
-  animation:float 10s linear infinite;
+  font-size:18px;
+  animation:float 12s linear infinite;
   opacity:0.8;
 }
 
@@ -106,12 +97,11 @@ video{
   100%{transform:translateY(-120vh);opacity:0;}
 }
 
-/* Teddy effect */
-.teddy{
-  position:fixed;
-  bottom:-30px;
-  font-size:28px;
-  animation:float 12s linear infinite;
+.glow{
+  transition:0.3s;
+}
+.glow:active{
+  box-shadow:0 0 40px #ff4d6d;
 }
 
 </style>
@@ -125,14 +115,14 @@ video{
 
 <div id="coming">
   <h1>Coming Soon ✨</h1>
-  <p>Tap To Enter Our Story</p>
+  <p>Tap To Enter</p>
 </div>
 
-<div id="main">
+<div id="main" class="glow">
 
-<div class="title">16 August 2025 🧸</div>
+<div class="title">16 August 2025 ❤️</div>
 
-<div class="story" id="storySection">
+<div class="story">
 
 Us din hum bohot dino baad mile the…  
 Dooriyan sirf shehron ki nahi thi…  
@@ -151,15 +141,12 @@ Maano us din mujhe meri duniya mil gayi…
 Aur sach me… mujhe tum mil gayi 💞  
 
 Tumne meri zindagi badal di…  
-Galat aadatein chhoot gayi…  
 Main jeena seekh gaya ❤️  
 
 Happy Birthday meri jaan 🎂  
 Mera har kal tumhare naam ♾️  
 
 </div>
-
-<button id="videoBtn">Open Our Special Memory ❤️</button>
 
 <div class="video-wrapper" id="videoSection">
   <video controls playsinline>
@@ -171,23 +158,14 @@ Mera har kal tumhare naam ♾️
 
 <script>
 
-/* Coming Screen */
+/* Coming Screen Click */
 document.getElementById("coming").addEventListener("click",function(){
   this.style.display="none";
   document.getElementById("main").style.display="block";
-});
 
-/* Start Music When Story Is Clicked */
-document.getElementById("storySection").addEventListener("click",function(){
   var music=document.getElementById("bgMusic");
   music.volume=0.35;
   music.play();
-});
-
-/* Video Reveal */
-document.getElementById("videoBtn").addEventListener("click",function(){
-  document.getElementById("videoSection").style.display="block";
-  this.style.display="none";
 });
 
 /* Stars Effect */
@@ -196,22 +174,11 @@ function createStar(){
   star.classList.add("star");
   star.innerHTML="✨";
   star.style.left=Math.random()*100+"vw";
-  star.style.fontSize=(Math.random()*20+15)+"px";
+  star.style.fontSize=(Math.random()*15+12)+"px";
   document.body.appendChild(star);
-  setTimeout(()=>{star.remove();},10000);
+  setTimeout(()=>{star.remove();},12000);
 }
-setInterval(createStar,800);
-
-/* Teddy Effect */
-function createTeddy(){
-  const teddy=document.createElement("div");
-  teddy.classList.add("teddy");
-  teddy.innerHTML="🧸";
-  teddy.style.left=Math.random()*100+"vw";
-  document.body.appendChild(teddy);
-  setTimeout(()=>{teddy.remove();},12000);
-}
-setInterval(createTeddy,4000);
+setInterval(createStar,700);
 
 </script>
 
